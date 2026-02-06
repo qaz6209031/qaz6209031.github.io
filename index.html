@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kai-Chin Huang - Software Engineer based in Santa Barbara, CA">
+  <title>Kai-Chin Huang | Software Engineer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #252525;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #3b82f6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .links a {
+      color: var(--text-muted);
+    }
+
+    .links a:hover {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    section h2 {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    /* Experience & Education */
+    .item {
+      margin-bottom: 2rem;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .item-title {
+      font-weight: 600;
+    }
+
+    .item-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .item-subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .item ul {
+      list-style: none;
+    }
+
+    .item li {
+      position: relative;
+      padding-left: 1rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .item li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--border);
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-tech {
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      header {
+        padding: 3rem 0 2rem;
+      }
+
+      header h1 {
+        font-size: 1.75rem;
+      }
+
+      section {
+        padding: 2rem 0;
+      }
+
+      .item-header {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .skill {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Kai-Chin Huang</h1>
+      <p>Software Engineer · Santa Barbara, CA</p>
+      <div class="links">
+        <a href="mailto:kaichihuang1@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/kaichihuang" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/kaichihuang" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Java</span>
+        <span class="skill">Python</span>
+        <span class="skill">TypeScript</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">C++</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">AWS</span>
+        <span class="skill">Docker</span>
+        <span class="skill">PostgreSQL</span>
+        <span class="skill">MongoDB</span>
+        <span class="skill">Git</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Amazon</span>
+          <span class="item-date">Jun – Sep 2024</span>
+        </div>
+        <div class="item-subtitle">Software Development Engineer Intern</div>
+        <ul>
+          <li>Built a full-stack internal tool using TypeScript, React, and AWS (Lambda, DynamoDB, S3)</li>
+          <li>Designed a CI/CD pipeline with AWS CDK, reducing deployment time by 40%</li>
+          <li>Integrated natural language search using RAG and LLMs, improving search accuracy by 25%</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Yardi Systems</span>
+          <span class="item-date">Jun – Sep 2023</span>
+        </div>
+        <div class="item-subtitle">Software Development Intern</div>
+        <ul>
+          <li>Developed RESTful APIs with Java Spring Boot & PostgreSQL</li>
+          <li>Optimized SQL queries, reducing response times by 30%</li>
+          <li>Implemented automated testing with JUnit, increasing code coverage to 85%</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-title">Habit Reports</div>
+        <div class="project-tech">React, Node.js, MongoDB, OpenAI API</div>
+        <div class="project-desc">AI-powered habit tracking app with personalized weekly reports</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Random Emoji Commit</div>
+        <div class="project-tech">TypeScript, Git</div>
+        <div class="project-desc">CLI tool to auto-generate commit messages with emojis (200+ GitHub stars)</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Tab Closer</div>
+        <div class="project-tech">JavaScript, Chrome APIs</div>
+        <div class="project-desc">Chrome extension to automatically close tabs based on custom rules</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">M.S. Computer Science</span>
+          <span class="item-date">Expected Mar 2026</span>
+        </div>
+        <div class="item-subtitle">UC Santa Barbara</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">B.S. Computer Science</span>
+          <span class="item-date">Jun 2024</span>
+        </div>
+        <div class="item-subtitle">UC Santa Barbara</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">B.S. Statistics & Data Science</span>
+          <span class="item-date">Jun 2024</span>
+        </div>
+        <div class="item-subtitle">UC Santa Barbara</div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Kai-Chin Huang
+    </footer>
+  </div>
+</body>
+</html>
