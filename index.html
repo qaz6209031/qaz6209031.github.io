@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -479,6 +479,12 @@
       /* Sections */
       section {
         padding: 80px 0;
+      }
+      @supports (content-visibility: auto) {
+        section:not(.hero) {
+          content-visibility: auto;
+          contain-intrinsic-size: 800px;
+        }
       }
       .section-header {
         text-align: center;
@@ -1772,6 +1778,76 @@
               <span class="p-tag">TypeScript</span
               ><span class="p-tag">Chrome API</span
               ><span class="p-tag">Extension</span>
+            </div>
+          </div>
+          <div class="p-card reveal">
+            <div class="p-icon">&#x1F35E;</div>
+            <a
+              href="https://medium.com/a-chatbots-life/voice-recognition-bakery-solution-1cdb06cf636e"
+              target="_blank"
+              class="p-link"
+            >
+              <h3 class="p-title">Bakery Voice Recognition System</h3>
+              <span class="p-link-icon"
+                ><svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M6 2h8v8" />
+                  <path d="M14 2L6 10" />
+                  <path d="M2 6v8h8" /></svg
+              ></span>
+            </a>
+            <p class="p-subtitle">San Luis Obispo, CA · 2021</p>
+            <p class="p-desc">
+              Built a voice recognition system for bakery workflows using
+              Python and Google Voice Kit on Raspberry Pi, enabling hands-free
+              dictation for common baking queries to support local businesses.
+            </p>
+            <div class="p-tags">
+              <span class="p-tag">Python</span
+              ><span class="p-tag">Google API</span
+              ><span class="p-tag">Raspberry Pi</span>
+            </div>
+          </div>
+          <div class="p-card reveal">
+            <div class="p-icon">&#x1F6E0;&#xFE0F;</div>
+            <a
+              href="https://qaz6209031.github.io//Cal-Poly-Surp-Website/"
+              target="_blank"
+              class="p-link"
+            >
+              <h3 class="p-title">Search and Rescue Website Demo</h3>
+              <span class="p-link-icon"
+                ><svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M6 2h8v8" />
+                  <path d="M14 2L6 10" />
+                  <path d="M2 6v8h8" /></svg
+              ></span>
+            </a>
+            <p class="p-subtitle">San Luis Obispo, CA · 2021</p>
+            <p class="p-desc">
+              Built a web app that converts physical rescue team forms into
+              electronic workflows, giving rescuers faster access to search
+              tools. Led a team of four to plan architecture, set code
+              direction, and track delivery across the full application.
+            </p>
+            <div class="p-tags">
+              <span class="p-tag">Bootstrap</span
+              ><span class="p-tag">jQuery</span
+              ><span class="p-tag">Node.js</span
+              ><span class="p-tag">Express</span
+              ><span class="p-tag">Firebase</span
+              ><span class="p-tag">Heroku</span>
             </div>
           </div>
         </div>
