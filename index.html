@@ -4,6 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kai-Chin Huang | Software Engineer</title>
+    <script id="personal-website-analytics">
+      // Collect only the live portfolio, keeping other kaichin.dev projects separate.
+      (function () {
+        if (
+          window.location.hostname !== "kaichin.dev" ||
+          !["/", "/index.html"].includes(window.location.pathname)
+        ) {
+          return;
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", "G-2B46VSS4B1", {
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
+        });
+
+        var tag = document.createElement("script");
+        tag.async = true;
+        tag.src = "https://www.googletagmanager.com/gtag/js?id=G-2B46VSS4B1";
+        document.head.appendChild(tag);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

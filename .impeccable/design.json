@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T06:36:22.696790+00:00",
+  "title": "Design System: kaichin.dev",
+  "extensions": {
+    "colorMeta": {
+      "midnight-desk": {
+        "role": "neutral",
+        "displayName": "Midnight Desk",
+        "canonical": "#0a0e17",
+        "tonalRamp": [
+          "#171c27",
+          "#2b364f",
+          "#3c4f7a",
+          "#4b67a8",
+          "#7289bd",
+          "#9eadcd",
+          "#c8cfe0",
+          "#eff1f5"
+        ]
+      },
+      "desk-shadow": {
+        "role": "neutral",
+        "displayName": "Desk Shadow",
+        "canonical": "#111827",
+        "tonalRamp": [
+          "#171c27",
+          "#2b364f",
+          "#3c507a",
+          "#4b68a8",
+          "#728abd",
+          "#9fadcd",
+          "#c8d0e0",
+          "#eff1f5"
+        ]
+      },
+      "panel-slate": {
+        "role": "neutral",
+        "displayName": "Panel Slate",
+        "canonical": "#1a2236",
+        "tonalRamp": [
+          "#181c26",
+          "#2d364d",
+          "#3f4f77",
+          "#5068a3",
+          "#7689b9",
+          "#a1adca",
+          "#c9cfdf",
+          "#f0f1f5"
+        ]
+      },
+      "monitor-mint": {
+        "role": "primary",
+        "displayName": "Monitor Mint",
+        "canonical": "#6ee7b7",
+        "tonalRamp": [
+          "#102d22",
+          "#1c5e44",
+          "#229467",
+          "#24ce8b",
+          "#54dba6",
+          "#8be0bf",
+          "#beead8",
+          "#edf8f3"
+        ]
+      },
+      "late-indigo": {
+        "role": "secondary",
+        "displayName": "Late Indigo",
+        "canonical": "#818cf8",
+        "tonalRamp": [
+          "#0d1031",
+          "#131b66",
+          "#1421a2",
+          "#0f23e3",
+          "#4352ec",
+          "#818beb",
+          "#b9beef",
+          "#ebedf9"
+        ]
+      },
+      "sticky-note-pink": {
+        "role": "tertiary",
+        "displayName": "Sticky-Note Pink",
+        "canonical": "#f472b6",
+        "tonalRamp": [
+          "#300d1f",
+          "#65153f",
+          "#9f175e",
+          "#df147e",
+          "#e9479b",
+          "#e883b8",
+          "#eebad5",
+          "#f9ecf3"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#f8fafc",
+        "tonalRamp": [
+          "#171f27",
+          "#2a3d4f",
+          "#3b5b7b",
+          "#4a79a9",
+          "#7298bd",
+          "#9eb6cd",
+          "#c8d4e0",
+          "#eff2f5"
+        ]
+      },
+      "screen-text": {
+        "role": "neutral",
+        "displayName": "Screen Text",
+        "canonical": "#e2e8f0",
+        "tonalRamp": [
+          "#181e25",
+          "#2e3b4c",
+          "#425774",
+          "#54749f",
+          "#7993b6",
+          "#a3b3c9",
+          "#cad3de",
+          "#f0f2f5"
+        ]
+      },
+      "dim-slate": {
+        "role": "neutral",
+        "displayName": "Dim Slate",
+        "canonical": "#94a3b8",
+        "tonalRamp": [
+          "#1b1e23",
+          "#333b46",
+          "#4b586b",
+          "#617591",
+          "#8494ab",
+          "#aab4c2",
+          "#ced3da",
+          "#f1f2f4"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(148, 163, 184, 0.12)",
+        "tonalRamp": []
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Centered section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Timeline roles and project names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Hero bio and section descriptions."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "Card descriptions and bullets."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono tags, dates, subtitles, eyebrows."
+      },
+      "role": {
+        "displayName": "Role",
+        "purpose": "Hero job-title line in Late Indigo."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mint-glow-rest",
+        "value": "0 4px 20px rgba(110, 231, 183, 0.25)",
+        "purpose": "Primary button at rest."
+      },
+      {
+        "name": "mint-glow-raised",
+        "value": "0 8px 30px rgba(110, 231, 183, 0.25)",
+        "purpose": "Primary button on hover."
+      },
+      {
+        "name": "dot-glow",
+        "value": "0 0 20px rgba(110, 231, 183, 0.25)",
+        "purpose": "Timeline dots."
+      },
+      {
+        "name": "lift-soft",
+        "value": "0 6px 20px rgba(0, 0, 0, 0.2)",
+        "purpose": "Social links on hover."
+      },
+      {
+        "name": "lift-deep",
+        "value": "0 12px 40px rgba(0, 0, 0, 0.3)",
+        "purpose": "Larger clickable containers on hover."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-spring",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Every entrance and hover transition."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity 0→1, translateY 30px→0, 0.7s ease-spring",
+        "purpose": "Scroll reveal for content blocks."
+      },
+      {
+        "name": "code-rotate",
+        "value": "5s interval",
+        "purpose": "Desk-scene monitor code rotation."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "768px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single primary action; mint-to-indigo gradient with resting mint glow.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">View Projects →</a>",
+      "css": ":host{--bg:#0a0e17;--bg3:#1a2236;--accent:#6ee7b7;--accent2:#818cf8;--glow:rgba(110,231,183,0.25);--text:#e2e8f0;--text2:#94a3b8;--bright:#f8fafc;--border:rgba(148,163,184,0.12);}.ds-btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:14px;font-family:Sora,sans-serif;font-weight:600;font-size:0.95rem;text-decoration:none;color:#0a0e17;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 4px 20px var(--glow);transition:all 0.3s cubic-bezier(0.22, 1, 0.36, 1);}.ds-btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 30px var(--glow);}.ds-btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Social Link",
+      "kind": "button",
+      "refersTo": "social-link",
+      "description": "Glass chip with icon and visible label for external profiles.",
+      "html": "<a class=\"ds-social\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"/></svg>GitHub</a>",
+      "css": ":host{--bg:#0a0e17;--bg3:#1a2236;--accent:#6ee7b7;--accent2:#818cf8;--glow:rgba(110,231,183,0.25);--text:#e2e8f0;--text2:#94a3b8;--bright:#f8fafc;--border:rgba(148,163,184,0.12);}.ds-social{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:Sora,sans-serif;font-size:0.9rem;font-weight:500;text-decoration:none;transition:all 0.3s cubic-bezier(0.22, 1, 0.36, 1);}.ds-social:hover{border-color:var(--accent);color:var(--accent);background:rgba(110,231,183,0.08);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.2);}.ds-social:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Fixed glass bar with mono logo and underline-grow links.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-logo\" href=\"#\">Kai-Chin<span>Huang</span></a><div class=\"ds-links\"><a href=\"#\">Experience</a><a href=\"#\">Projects</a><a href=\"#\">Skills</a></div></nav>",
+      "css": ":host{--bg:#0a0e17;--bg3:#1a2236;--accent:#6ee7b7;--accent2:#818cf8;--glow:rgba(110,231,183,0.25);--text:#e2e8f0;--text2:#94a3b8;--bright:#f8fafc;--border:rgba(148,163,184,0.12);}.ds-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;background:rgba(10,14,23,0.75);backdrop-filter:blur(24px) saturate(1.4);border-bottom:1px solid var(--border);}.ds-logo{font-family:'Space Mono',monospace;font-size:1.4rem;font-weight:700;color:var(--accent);letter-spacing:-1px;text-decoration:none;}.ds-logo span{color:var(--accent2);}.ds-links{display:flex;gap:36px;}.ds-links a{position:relative;color:var(--text2);font-family:Sora,sans-serif;font-weight:500;font-size:0.9rem;letter-spacing:0.02em;text-decoration:none;transition:color 0.3s;}.ds-links a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--accent);border-radius:2px;transition:width 0.3s;}.ds-links a:hover{color:var(--bright);}.ds-links a:hover::after{width:100%;}"
+    },
+    {
+      "name": "Availability Badge",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Mint-tinted pill with a status dot.",
+      "html": "<span class=\"ds-badge\"><span class=\"ds-dot\"></span>Available for opportunities</span>",
+      "css": ":host{--bg:#0a0e17;--bg3:#1a2236;--accent:#6ee7b7;--accent2:#818cf8;--glow:rgba(110,231,183,0.25);--text:#e2e8f0;--text2:#94a3b8;--bright:#f8fafc;--border:rgba(148,163,184,0.12);}.ds-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:50px;background:rgba(110,231,183,0.08);border:1px solid rgba(110,231,183,0.2);font-family:Sora,sans-serif;font-size:0.85rem;font-weight:600;color:var(--accent);}.ds-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);}"
+    },
+    {
+      "name": "Section Tag",
+      "kind": "chip",
+      "refersTo": "section-tag",
+      "description": "Mono `// eyebrow` pill above each section title.",
+      "html": "<span class=\"ds-tag\">// projects</span>",
+      "css": ":host{--bg:#0a0e17;--bg3:#1a2236;--accent:#6ee7b7;--accent2:#818cf8;--glow:rgba(110,231,183,0.25);--text:#e2e8f0;--text2:#94a3b8;--bright:#f8fafc;--border:rgba(148,163,184,0.12);}.ds-tag{display:inline-block;padding:6px 18px;background:rgba(129,140,248,0.08);border:1px solid rgba(129,140,248,0.2);border-radius:50px;font-family:'Space Mono',monospace;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;color:var(--accent2);}"
+    },
+    {
+      "name": "Tech Tag",
+      "kind": "chip",
+      "refersTo": "tech-tag",
+      "description": "Indigo-tinted mono chip listing a technology.",
+      "html": "<span class=\"ds-tech\">TypeScript</span>",
+      "css": ":host{--bg:#0a0e17;--bg3:#1a2236;--accent:#6ee7b7;--accent2:#818cf8;--glow:rgba(110,231,183,0.25);--text:#e2e8f0;--text2:#94a3b8;--bright:#f8fafc;--border:rgba(148,163,184,0.12);}.ds-tech{display:inline-block;padding:4px 14px;background:rgba(129,140,248,0.08);border:1px solid rgba(129,140,248,0.15);border-radius:20px;font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--accent2);}"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Translucent slate card: icon tile, linked title, mono subtitle, description, mint usage stat, tech tags.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-icon\">🗺️</div><a class=\"ds-title\" href=\"#\">Google Maps Route to GPX</a><div class=\"ds-sub\">Website</div><p class=\"ds-desc\">Converts Google Maps direction URLs into GPX files for cycling computers.</p><div class=\"ds-stat\">👥 100+ users per day</div></article>",
+      "css": ":host{--bg:#0a0e17;--bg3:#1a2236;--accent:#6ee7b7;--accent2:#818cf8;--glow:rgba(110,231,183,0.25);--text:#e2e8f0;--text2:#94a3b8;--bright:#f8fafc;--border:rgba(148,163,184,0.12);}.ds-card{max-width:360px;background:rgba(26,34,54,0.5);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:20px;padding:32px;font-family:Sora,sans-serif;transition:all 0.4s cubic-bezier(0.22, 1, 0.36, 1);}.ds-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px;background:linear-gradient(135deg,rgba(110,231,183,0.15),rgba(129,140,248,0.15));border:1px solid rgba(110,231,183,0.2);}.ds-title{display:block;font-size:1.2rem;font-weight:700;color:var(--bright);text-decoration:none;margin-bottom:6px;transition:color 0.3s;}.ds-title:hover{color:var(--accent);}.ds-sub{font-family:'Space Mono',monospace;font-size:0.82rem;color:var(--accent2);margin-bottom:10px;}.ds-desc{font-size:0.92rem;line-height:1.6;color:var(--text2);margin:0 0 18px;}.ds-stat{font-size:0.8rem;font-weight:600;color:var(--accent);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Shift Studio",
+    "overview": "The site is a desk after hours: a dark room lit by a monitor, coffee steaming, someone building their own thing once the day job is done. Everything sits on a near-black navy (Midnight Desk), and light comes from the screen. Monitor Mint is the glow of a terminal, Late Indigo is the second window, and Space Mono labels read like code comments pinned to the work. The hero illustration of a desk, monitor, and rotating code is the literal scene this system describes.\n\nDensity is comfortable and airy: generous section padding, centered section headers, cards that float on translucent slate panels. Motion is ambient and continuous (drifting color blobs, a blinking cursor, steam, typed code lines), with a single shared easing curve that makes entrances feel springy rather than mechanical.\n\nThe voice is casual and confident. Space Mono carries the engineer's register (`// experience`, roles, tags), while Sora carries the human one (names, headings, prose).",
+    "keyCharacteristics": [
+      "Near-black navy ground with mint and indigo light sources; pink is a rare third note.",
+      "Two-family pairing: Sora for people and prose, Space Mono for code-like metadata.",
+      "Translucent slate cards with hairline borders and a backdrop blur.",
+      "Ambient, looping motion in the background; springy entrances on content.",
+      "Code as decoration that is actually about the work (ASINs, scaling plans, habit APIs)."
+    ],
+    "rules": [
+      {
+        "name": "The Emitted Light Rule",
+        "body": "Accent colors appear as light (text, thin strokes, glows, low-alpha tints at 6–20%), never as large opaque fills. The one exception is the primary button, which is the brightest object on the page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mint Means Real Rule",
+        "body": "Monitor Mint marks things that are live or actionable: usage stats, availability, links, the primary action. Don't spend it on decoration that carries no meaning.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Registers Rule",
+        "body": "Sora speaks for the person, Space Mono speaks for the machine. Names, headings, and prose are Sora. Dates, tags, roles, and `// eyebrows` are Space Mono. Don't mix within a single line.",
+        "section": "typography"
+      },
+      {
+        "name": "The Glow Is Earned Rule",
+        "body": "Hover reactions (lift, Mint glow, border shift) belong only to elements you can click: the primary button, links, and cards that are fully clickable. Non-interactive surfaces (timeline cards, skill tiles, interest pills) stay still on hover. If it doesn't do anything when clicked, it doesn't react when hovered. The only resting glows are the primary button and the timeline dots.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep Midnight Desk as the only page background. Build depth with translucent Panel Slate cards (40–60% alpha) and Hairline borders.",
+      "**Do** reserve Monitor Mint for live or actionable things: usage stats, availability, links, the primary action.",
+      "**Do** set dates, tags, roles, and section eyebrows in Space Mono, and names, headings, and prose in Sora.",
+      "**Do** use `cubic-bezier(0.22, 1, 0.36, 1)` for every entrance and hover transition.",
+      "**Do** keep the decorative code content about the real work."
+    ],
+    "donts": [
+      "**Don't** put the hover lift or Mint glow on anything that isn't clickable. Timeline cards, skill tiles, and interest pills stay still.",
+      "**Don't** fill large areas with opaque accent color. Accents are light, not paint. The primary button is the only exception.",
+      "**Don't** use Sticky-Note Pink for text or actions; it only appears as the tail of a gradient or in background atmosphere.",
+      "**Don't** introduce sharp corners or borders thicker than 1px."
+    ]
+  }
+}
