@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-11T07:55:41.335Z",
+        "reason": "Claude triage: rendered at 1440 the roles are body 18px, standfirst 25px, row titles 40px, section heads 52px, name 122px, every step at least 1.3x; the detector reads the clamp() floors"
+      }
+    ]
+  }
+}

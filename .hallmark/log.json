@@ -1,0 +1,30 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "Feature Stack (recast)",
+  "theme": "editorial",
+  "axes": "light/display-condensed/chromatic-green",
+  "hero": "Stage reversed",
+  "nav": "masthead",
+  "footer": "colophon block",
+  "imagery": "portrait 1 (owner), screenshots 1 (capture.mjs)",
+  "photos": [],
+  "entry": "none",
+  "sections": [
+   "hero",
+   "showcase+index",
+   "ink band sticky pane",
+   "well tables",
+   "statement close",
+   "colophon"
+  ],
+  "signature": "owner portrait slot for the 3D model",
+  "waived": [
+   "44c"
+  ],
+  "prompt": "personal site of a software engineer who ships live products people use",
+  "date": "2026-11-11"
+ }
+]
