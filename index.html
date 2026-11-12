@@ -42,10 +42,10 @@
     />
     <style>
 /* Hallmark · shape: Feature Stack (draw 8ab7b9, recast: one sticky pane in Experience) · genre: editorial · theme: Editorial (deal 3/3, seed personal-software-engineer-who-1b1d·bdabd8d7·2026-11-11·r0) · redesign: full
- * hero: Stage, reversed (swapped from Poster: the only photograph is 460px) · nav: masthead · footer: colophon block · imagery: portrait 1 (the owner's), screenshots 2 (capture.mjs: maptogpx.com, kaichin.dev/bike) · signature: the owner in the first screen, a portrait slot that becomes the turnable 3D model
+ * hero: Stage, reversed (swapped from Poster: the hero is a turnable 3D figure, not a photograph) · nav: masthead · footer: colophon block · imagery: 3D model 1 (the owner, made with Meshy, with a still), screenshots 2 (capture.mjs: maptogpx.com, kaichin.dev/bike) · signature: the owner in the first screen as a 3D model the visitor can turn
  * axes: light/display-condensed/chromatic-green · posture: restrained · contrast: pass · fold: pass · job: hire · draw: 8ab7b9 · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 · weakest: P, a portfolio argues little by nature; the page argues shipped over described by opening the work on a live capture with its daily users */
-/* Hallmark · waive 44c · portrait spans y 262 to 722 and the text block with its fact row 280 to 715 at 1440, centres 5px apart · the fact row under the actions belongs to the portfolio's text block */
+/* Hallmark · waive 44c · the 3D figure spans y 180 to 774 and the text block with its fact row 280 to 715 at 1440, centres within 25px · the fact row under the actions belongs to the portfolio's text block */
 /* Hallmark · dropped /cdn-cgi/l/email-protection#80e8f5e1eee7aeebe1e9e3e8e9eec0e7ede1e9ecaee3efed · that Cloudflare-encoded href 404s on GitHub Pages, so the same address now opens as a plain mailto link */
 /* Hallmark · dropped sceneWrap, screenCode, screenGlow, deskGlow, n, .reveal · the drawn desk scene (80) and the hidden-at-rest reveal (62) left with them */
 /* Hallmark · reworded "I'm Kai-Chin Huang" to "Kai-Chin Huang" · 38iii named the gradient-accented half of the name */
@@ -102,8 +102,18 @@ a:active { text-decoration-color: var(--color-ink); }
 
 /* Hero */
 .hero__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; min-height: calc(100svh - var(--nav-h) - var(--rule-heavy)); padding-block: var(--space-2xl); }
-.portrait { margin: 0; height: min(64svh, 460px); aspect-ratio: 1 / 1; max-width: 100%; justify-self: end; }
-.portrait > img { object-position: 50% 50%; outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; }
+.portrait { display: flex; flex-direction: column; align-items: center; gap: var(--space-xs); margin: 0; max-width: 100%; justify-self: end; }
+.portrait__stage { height: min(66svh, 600px); aspect-ratio: 3 / 5; max-width: 100%; background: none; }
+.portrait__stage > img { object-fit: contain; filter: none; }
+.portrait__stage > canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; opacity: 0; touch-action: pan-y; cursor: grab; }
+.portrait__stage > canvas:active { cursor: grabbing; }
+.portrait__stage.is-live > canvas { opacity: 1; }
+.portrait__stage.is-live > img { visibility: hidden; }
+.portrait__cap { display: flex; align-items: center; gap: var(--space-md); min-height: 44px; font-size: var(--text-sm); color: var(--color-ink-2); }
+.textbtn { min-height: 44px; padding: 0 var(--space-xs); border: 0; background: none; color: var(--color-ink); font-family: var(--font-display); font-weight: 500; font-variation-settings: var(--wdth-label); font-size: var(--text-sm); text-decoration: underline; text-decoration-color: var(--color-rule-2); text-underline-offset: 0.2em; cursor: pointer; transition: text-decoration-color var(--dur-short) var(--ease-out); }
+.textbtn:hover { text-decoration-color: var(--color-accent); }
+.textbtn:active { color: var(--color-ink-2); }
+.textbtn:disabled { opacity: 0.55; cursor: not-allowed; }
 .hero__name { font-size: var(--text-name); line-height: 0.92; max-width: none; }
 .hero__lead { margin-top: var(--space-lg); font-size: var(--text-xl); line-height: 1.35; color: var(--color-ink); max-width: 34ch; }
 .hero__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: var(--space-xl) 0 0; padding: var(--space-md) 0 0; list-style: none; border-top: var(--rule-heavy) solid var(--color-ink); max-width: 640px; }
@@ -195,7 +205,8 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
   .mast__list, .mast__list--end { justify-content: flex-start; gap: var(--space-md); }
   .hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); min-height: 0; }
   .hero__text { order: -1; }
-  .portrait { height: auto; width: min(100%, 360px); }
+  .portrait { justify-self: stretch; width: 100%; }
+  .portrait__stage { height: auto; width: min(100%, 260px); }
 }
 @media (max-width: 40rem) {
   .mast__list { gap: var(--space-md); }
@@ -225,18 +236,32 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
     <main id="main">
       <section class="hero" aria-labelledby="hero-name">
         <div class="container hero__grid">
-          <figure
-            class="portrait"
-            data-slot="avatar"
-            data-alt="The 3D model of Kai-Chin made with Meshy, turnable, with this photograph as its still fallback"
-          >
-            <img
-              src="images/kai-chin.jpg"
-              width="460"
-              height="460"
-              alt="Kai-Chin Huang in a hoodie and glasses, smiling, on a city street at night"
-              fetchpriority="high"
-            />
+          <figure class="portrait">
+            <div
+              class="portrait__stage"
+              data-slot="avatar"
+              data-kind="product"
+              data-avatar="models/kai.glb"
+              data-alt="A still of the 3D model of Kai-Chin, front view, on a transparent ground"
+            >
+              <img
+                src="images/kai-3d.webp"
+                width="720"
+                height="1200"
+                alt="A 3D model of Kai-Chin Huang standing, in glasses, an olive hoodie, grey joggers and running shoes"
+                fetchpriority="high"
+              />
+              <canvas
+                data-keep
+                tabindex="0"
+                role="img"
+                aria-label="3D model of Kai-Chin Huang. Drag, or use the left and right arrow keys, to turn it."
+              ></canvas>
+            </div>
+            <figcaption class="portrait__cap">
+              <span>Drag to turn</span>
+              <button class="textbtn" type="button" data-avatar-toggle hidden>Pause</button>
+            </figcaption>
           </figure>
           <div class="hero__text">
             <h1 class="hero__name" id="hero-name">Kai-Chin Huang</h1>
@@ -458,5 +483,7 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 
     <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
 document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+    <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+    <script type="module" src="avatar.js"></script>
   </body>
 </html>
