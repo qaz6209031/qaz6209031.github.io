@@ -39,7 +39,7 @@ kaichin.dev is the personal portfolio of Kai-Chin Huang, Software Engineer II at
 ## Brand Commitments
 
 - Name: Kai-Chin Huang; domain kaichin.dev.
-- **Personal side stays.** The interests block (cycling, working out, vibe coding) is part of the identity and must not be removed. Footer voice: "Vibe coded with 💚 and ☕".
+- **Personal side stays.** The interests block (cycling, working out, vibe coding) is part of the identity and must not be removed.
 - Tone in current copy: direct, first person, casual-confident, impact stated with numbers.
 
 ## Evidence on Hand

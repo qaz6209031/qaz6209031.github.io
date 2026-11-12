@@ -42,7 +42,7 @@
     />
     <style>
 /* Hallmark · shape: Feature Stack (draw 8ab7b9, recast: one sticky pane in Experience) · genre: editorial · theme: Editorial (deal 3/3, seed personal-software-engineer-who-1b1d·bdabd8d7·2026-11-11·r0) · redesign: full
- * hero: Stage, reversed (swapped from Poster: the hero is a turnable 3D figure, not a photograph) · nav: masthead · footer: colophon block · imagery: 3D model 1 (the owner, made with Meshy, with a still), screenshots 2 (capture.mjs: critterformations.com, maptogpx.com), 8 thumbnails (store listings and captures), library 1 (Raspberry Pi) · signature: the owner in the first screen as a 3D model the visitor can turn
+ * hero: Stage, reversed (swapped from Poster: the hero is a turnable 3D figure, not a photograph) · nav: masthead · footer: none (by request) · imagery: 3D model 1 (the owner, made with Meshy, with a still), screenshots 2 (capture.mjs: critterformations.com, maptogpx.com), 9 thumbnails (store listings, captures and the owner’s photo of the bakery device) · signature: the owner in the first screen as a 3D model the visitor can turn
  * axes: light/display-condensed/chromatic-green · posture: restrained · contrast: pass · fold: pass · job: hire · draw: 8ab7b9 · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 · weakest: P, a portfolio argues little by nature; the page argues shipped over described by opening the work on a live capture with its daily users */
 /* Hallmark · waive 44c · the 3D figure spans y 180 to 774 and the text block with its fact row 280 to 715 at 1440, centres within 25px · the fact row under the actions belongs to the portfolio's text block */
@@ -53,6 +53,7 @@
 /* Hallmark · reworded "Software Engineer II", "Software Engineer", "M.S. Information Studies", "B.E. Computer Science" and "A.S. Computer Science" into the pane lead, a role label and table row heads, word for word · the table and pane own them now */
 /* Hallmark · dropped "Some things I’ve built and shipped." · 69 names it, the line restated the section heading */
 /* Hallmark · dropped Search and Rescue, Random Emoji Commit, https://www.npmjs.com/package/random-emoji-commit?activeTab=readme, https://apps.apple.com/us/app/habit-reports/id6757502106?l=zh-Hant-TW, https://qaz6209031.github.io/Cal-Poly-Surp-Website/ · the owner retired these projects on 2026-11-11 */
+/* Hallmark · dropped 2026 · the owner removed the whole footer, copyright line included, on 2026-11-12 */
 /* Hallmark · hero-review: fix · 5 findings · 4 resolved 1 answered (the 460px portrait stands in until the Meshy model lands) */
 /* Hallmark · finish-review: subagent · 6 findings · 6 resolved · gap: the signature waits on the 3D model */
 @import url("./tokens.css");
@@ -144,7 +145,7 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 .index__row h4 { margin: 0; font-family: var(--font-display); font-weight: var(--display-weight); font-variation-settings: var(--wdth-display); font-size: var(--text-title); line-height: 1.1; letter-spacing: var(--tracking-display); color: var(--color-ink); overflow-wrap: break-word; min-width: 0; }
 .thumb { margin: 0; aspect-ratio: 16 / 10; }
 .thumb > img { outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; filter: none; }
-.index__body { display: flex; flex-direction: column; gap: var(--space-xs); }
+.index__body { grid-column: 2; display: flex; flex-direction: column; gap: var(--space-xs); }
 .index__body > p:not(.label) { max-width: 58ch; }
 .index__meta { display: flex; flex-direction: column; gap: var(--space-xs); }
 
@@ -183,9 +184,6 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 .profiles a { color: var(--color-ink); white-space: nowrap; }
 .contact__off { margin-top: var(--space-lg); color: var(--color-ink-2); }
 
-/* Colophon */
-.colophon .credits { margin-top: var(--space-xs); color: var(--color-muted); }
-.colophon { border-top: var(--rule-hair) solid var(--color-rule-2); padding-block: var(--space-xl) var(--space-2xl); font-size: var(--text-sm); color: var(--color-ink-2); }
 
 @media (max-width: 60rem) {
   .lead-project, .group, .stack-pane, .record, .earlier { grid-template-columns: minmax(0, 1fr); }
@@ -436,7 +434,7 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
                     <p class="label stack">TypeScript, Chrome API</p>
                   </div>
                   <div class="index__meta">
-                    <p class="figure"><span class="figure__n">100+</span> <span class="label">active users</span></p>
+                    <p class="figure"><span class="figure__n">851</span> <span class="label">installs</span></p>
                   </div>
                 </li>
                 <li class="index__row">
@@ -449,6 +447,7 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
                     <p class="label stack">JavaScript, Chrome API</p>
                   </div>
                   <div class="index__meta">
+                    <p class="figure"><span class="figure__n">708</span> <span class="label">installs</span></p>
                   </div>
                 </li>
             </ol>
@@ -458,7 +457,7 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
             <ol class="index" role="list">
                 <li class="index__row">
                   <figure class="thumb" data-slot="bakery-voice" data-kind="product">
-                    <img src="images/thumbs/bakery-voice.webp" width="960" height="600" alt="A Raspberry Pi single-board computer" loading="lazy" />
+                    <img src="images/thumbs/bakery-voice.webp" width="960" height="600" alt="The bakery voice assistant: a cardboard Google AIY Voice Kit cube with a light-up button on top" loading="lazy" />
                   </figure>
                   <div class="index__body">
                     <h4><a href="https://medium.com/a-chatbots-life/voice-recognition-bakery-solution-1cdb06cf636e" target="_blank" rel="noopener">Bakery Voice Recognition</a></h4>
@@ -556,12 +555,6 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
       </section>
     </main>
 
-    <footer class="colophon">
-      <div class="container">
-        <p>© 2026 Kai-Chin Huang. Vibe coded with 💚 and ☕. Set in Bricolage Grotesque and Source Serif 4, served by GitHub Pages.</p>
-        <p class="credits" data-credits>Photograph: <a href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Side.jpg">Raspberry Pi 4 by Laserlicht</a> (CC BY-SA 4.0, Wikimedia Commons).</p>
-      </div>
-    </footer>
 
     <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
 document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
