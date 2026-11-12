@@ -1,10 +1,10 @@
 // The hero's 3D figure. The still image shows first; the model loads once the
-// page is idle, then swaps in. Drag or use the arrow keys to turn it.
+// page is idle, then swaps in and keeps turning. Drag or use the arrow keys to
+// turn it by hand; it stays still under prefers-reduced-motion.
 // "three" and "three/addons/" resolve through the import map in index.html.
 
 const stage = document.querySelector("[data-avatar]");
 const canvas = stage && stage.querySelector("canvas");
-const toggle = document.querySelector("[data-avatar-toggle]");
 
 function canRender() {
   if (!stage || !canvas) return false;
@@ -44,6 +44,13 @@ async function start() {
   const gltf = await loader.loadAsync(stage.dataset.avatar);
   // Stand the model on the ground at a known height, whatever size it was exported at.
   const model = gltf.scene;
+  // A rigged mesh has to be measured in its posed shape, not its raw geometry.
+  model.updateMatrixWorld(true);
+  model.traverse((o) => {
+    if (!o.isSkinnedMesh) return;
+    o.computeBoundingBox();
+    o.frustumCulled = false;
+  });
   const box = new THREE.Box3().setFromObject(model);
   const size = box.getSize(new THREE.Vector3());
   const centre = box.getCenter(new THREE.Vector3());
@@ -53,10 +60,6 @@ async function start() {
   const figure = new THREE.Group();
   figure.add(model);
   scene.add(figure);
-
-  const mixer = new THREE.AnimationMixer(figure);
-  if (gltf.animations[0]) mixer.clipAction(gltf.animations[0]).play();
-  if (reduced) mixer.setTime(0);
 
   function resize() {
     const w = stage.clientWidth;
@@ -71,7 +74,7 @@ async function start() {
 
   // One horizontal turn only: the page keeps its vertical scroll on touch.
   let angle = 0;
-  let spinning = !reduced;
+  const spinning = !reduced;
   let dragging = false;
   let lastX = 0;
   const introFrom = -Math.PI * 2;
@@ -79,24 +82,10 @@ async function start() {
   const t0 = performance.now();
   const ease = (x) => Math.sqrt(1 - Math.pow(x - 1, 4));
 
-  function setSpinning(on) {
-    spinning = on;
-    if (toggle) {
-      toggle.textContent = on ? "Pause" : "Turn";
-      toggle.setAttribute("aria-pressed", String(!on));
-    }
-  }
-  if (toggle) {
-    toggle.hidden = false;
-    toggle.addEventListener("click", () => setSpinning(!spinning));
-  }
-  setSpinning(spinning);
-
   canvas.addEventListener("pointerdown", (e) => {
     dragging = true;
     lastX = e.clientX;
     canvas.setPointerCapture(e.pointerId);
-    setSpinning(false);
   });
   canvas.addEventListener("pointermove", (e) => {
     if (!dragging) return;
@@ -109,7 +98,6 @@ async function start() {
   canvas.addEventListener("keydown", (e) => {
     if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
     e.preventDefault();
-    setSpinning(false);
     angle += e.key === "ArrowLeft" ? -0.25 : 0.25;
   });
 
@@ -117,18 +105,14 @@ async function start() {
   new IntersectionObserver(([entry]) => (visible = entry.isIntersecting)).observe(stage);
 
   const clock = new THREE.Clock();
-  let hovered = false;
-  canvas.addEventListener("pointerenter", () => (hovered = true));
-  canvas.addEventListener("pointerleave", () => (hovered = false));
 
   function frame(now) {
     requestAnimationFrame(frame);
     const dt = Math.min(clock.getDelta(), 0.1);
     if (!visible || document.hidden) return;
-    if (!reduced) mixer.update(dt);
     const p = introMs ? Math.min((now - t0) / introMs, 1) : 1;
     const intro = introFrom * (1 - ease(p));
-    if (spinning && !dragging && !hovered && p === 1 && document.activeElement !== canvas) angle += dt * 0.35;
+    if (spinning && !dragging && p === 1) angle += dt * 0.35;
     figure.rotation.y = angle + intro;
     camera.position.set(target.x, target.y + 0.25, target.z + DIST);
     camera.lookAt(target);

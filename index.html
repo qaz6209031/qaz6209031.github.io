@@ -42,17 +42,17 @@
     />
     <style>
 /* Hallmark · shape: Feature Stack (draw 8ab7b9, recast: one sticky pane in Experience) · genre: editorial · theme: Editorial (deal 3/3, seed personal-software-engineer-who-1b1d·bdabd8d7·2026-11-11·r0) · redesign: full
- * hero: Stage, reversed (swapped from Poster: the hero is a turnable 3D figure, not a photograph) · nav: masthead · footer: colophon block · imagery: 3D model 1 (the owner, made with Meshy, with a still), screenshots 2 (capture.mjs: maptogpx.com, kaichin.dev/bike) · signature: the owner in the first screen as a 3D model the visitor can turn
+ * hero: Stage, reversed (swapped from Poster: the hero is a turnable 3D figure, not a photograph) · nav: masthead · footer: colophon block · imagery: 3D model 1 (the owner, made with Meshy, with a still), screenshots 2 (capture.mjs: critterformations.com, maptogpx.com) · signature: the owner in the first screen as a 3D model the visitor can turn
  * axes: light/display-condensed/chromatic-green · posture: restrained · contrast: pass · fold: pass · job: hire · draw: 8ab7b9 · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 · weakest: P, a portfolio argues little by nature; the page argues shipped over described by opening the work on a live capture with its daily users */
 /* Hallmark · waive 44c · the 3D figure spans y 180 to 774 and the text block with its fact row 280 to 715 at 1440, centres within 25px · the fact row under the actions belongs to the portfolio's text block */
 /* Hallmark · dropped /cdn-cgi/l/email-protection#80e8f5e1eee7aeebe1e9e3e8e9eec0e7ede1e9ecaee3efed · that Cloudflare-encoded href 404s on GitHub Pages, so the same address now opens as a plain mailto link */
 /* Hallmark · dropped sceneWrap, screenCode, screenGlow, deskGlow, n, .reveal · the drawn desk scene (80) and the hidden-at-rest reveal (62) left with them */
 /* Hallmark · reworded "I'm Kai-Chin Huang" to "Kai-Chin Huang" · 38iii named the gradient-accented half of the name */
-/* Hallmark · reworded "Career Journey" to "Amazon, 2022 to present", "Academic Background" to "Three degrees, 2019 to 2025", "Featured Projects" to "Six things I’ve shipped", "Skills" to "From TypeScript to AWS CDK" · craft 6 refuses journey and category-label heads */
+/* Hallmark · reworded "Career Journey" to "Amazon, 2022 to present", "Academic Background" to "Three degrees, 2019 to 2025", "Featured Projects" to "Ten things I’ve shipped", "Skills" to "From TypeScript to AWS CDK" · craft 6 refuses journey and category-label heads */
 /* Hallmark · reworded "Software Engineer II", "Software Engineer", "M.S. Information Studies", "B.E. Computer Science" and "A.S. Computer Science" into the pane lead, a role label and table row heads, word for word · the table and pane own them now */
 /* Hallmark · dropped "Some things I’ve built and shipped." · 69 names it, the line restated the section heading */
-/* Hallmark · dropped Habit Reports, Bakery Voice Recognition System, Search and Rescue, Random Emoji Commit, https://www.npmjs.com/package/random-emoji-commit?activeTab=readme, https://apps.apple.com/us/app/habit-reports/id6757502106?l=zh-Hant-TW, https://medium.com/a-chatbots-life/voice-recognition-bakery-solution-1cdb06cf636e, https://qaz6209031.github.io/Cal-Poly-Surp-Website/ · the owner retired these four projects on 2026-11-11; Tabmates replaces Habit Reports */
+/* Hallmark · dropped Bakery Voice Recognition System, Search and Rescue, Random Emoji Commit, https://www.npmjs.com/package/random-emoji-commit?activeTab=readme, https://apps.apple.com/us/app/habit-reports/id6757502106?l=zh-Hant-TW, https://medium.com/a-chatbots-life/voice-recognition-bakery-solution-1cdb06cf636e, https://qaz6209031.github.io/Cal-Poly-Surp-Website/ · the owner retired these projects on 2026-11-11 */
 /* Hallmark · hero-review: fix · 5 findings · 4 resolved 1 answered (the 460px portrait stands in until the Meshy model lands) */
 /* Hallmark · finish-review: subagent · 6 findings · 6 resolved · gap: the signature waits on the 3D model */
 @import url("./tokens.css");
@@ -110,10 +110,6 @@ a:active { text-decoration-color: var(--color-ink); }
 .portrait__stage.is-live > canvas { opacity: 1; }
 .portrait__stage.is-live > img { visibility: hidden; }
 .portrait__cap { display: flex; align-items: center; gap: var(--space-md); min-height: 44px; font-size: var(--text-sm); color: var(--color-ink-2); }
-.textbtn { min-height: 44px; padding: 0 var(--space-xs); border: 0; background: none; color: var(--color-ink); font-family: var(--font-display); font-weight: 500; font-variation-settings: var(--wdth-label); font-size: var(--text-sm); text-decoration: underline; text-decoration-color: var(--color-rule-2); text-underline-offset: 0.2em; cursor: pointer; transition: text-decoration-color var(--dur-short) var(--ease-out); }
-.textbtn:hover { text-decoration-color: var(--color-accent); }
-.textbtn:active { color: var(--color-ink-2); }
-.textbtn:disabled { opacity: 0.55; cursor: not-allowed; }
 .hero__name { font-size: var(--text-name); line-height: 0.92; max-width: none; }
 .hero__lead { margin-top: var(--space-lg); font-size: var(--text-xl); line-height: 1.35; color: var(--color-ink); max-width: 34ch; }
 .hero__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: var(--space-xl) 0 0; padding: var(--space-md) 0 0; list-style: none; border-top: var(--rule-heavy) solid var(--color-ink); max-width: 640px; }
@@ -129,7 +125,7 @@ a:active { text-decoration-color: var(--color-ink); }
 .stack { color: var(--color-muted); }
 .figure { display: flex; flex-direction: column; gap: var(--space-2xs); }
 .figure__n { font-family: var(--font-display); font-weight: var(--display-weight); font-variation-settings: var(--wdth-display); font-size: var(--text-figure); line-height: 1; color: var(--color-ink); font-variant-numeric: lining-nums tabular-nums; letter-spacing: var(--tracking-display); }
-h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
+h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 
 /* Projects */
 .work { padding-block: var(--section-gap-s) var(--section-gap); }
@@ -140,9 +136,12 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 .lead-project__facts { display: flex; flex-direction: column; gap: var(--space-md); }
 .lead-project__facts h3 { font-size: var(--text-row); }
 .lead-project__facts .figure { margin-top: var(--space-xs); }
-.index { margin: var(--space-3xl) 0 0; padding: 0; list-style: none; border-top: var(--rule-heavy) solid var(--color-ink); }
-.index__row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr); gap: var(--gap-columns); padding-block: var(--space-xl); border-bottom: var(--rule-hair) solid var(--color-rule); }
-.index__row h3 { font-size: var(--text-row); }
+.group { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: var(--gap-columns); align-items: start; margin-top: var(--space-3xl); padding-top: var(--space-lg); border-top: var(--rule-heavy) solid var(--color-ink); }
+.group > h3 { font-size: var(--text-row); }
+.index { margin: 0; padding: 0; list-style: none; }
+.index__row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.index__row:first-child { padding-top: 0; }
+.index__row h4 { margin: 0; font-family: var(--font-display); font-weight: var(--display-weight); font-variation-settings: var(--wdth-display); font-size: var(--text-title); line-height: 1.1; letter-spacing: var(--tracking-display); color: var(--color-ink); overflow-wrap: break-word; min-width: 0; }
 .index__row > p { max-width: 58ch; }
 .index__meta { display: flex; flex-direction: column; gap: var(--space-xs); }
 
@@ -185,7 +184,7 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 .colophon { border-top: var(--rule-hair) solid var(--color-rule-2); padding-block: var(--space-xl) var(--space-2xl); font-size: var(--text-sm); color: var(--color-ink-2); }
 
 @media (max-width: 60rem) {
-  .lead-project, .index__row, .stack-pane, .record, .earlier { grid-template-columns: minmax(0, 1fr); }
+  .lead-project, .group, .index__row, .stack-pane, .record, .earlier { grid-template-columns: minmax(0, 1fr); }
   .stack-pane__pin { position: static; }
   .earlier h3 { grid-row: auto; }
   .earlier p:last-child { grid-column: auto; }
@@ -260,7 +259,6 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
             </div>
             <figcaption class="portrait__cap">
               <span>Drag to turn</span>
-              <button class="textbtn" type="button" data-avatar-toggle hidden>Pause</button>
             </figcaption>
           </figure>
           <div class="hero__text">
@@ -282,10 +280,48 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
       <section class="work" id="projects" aria-labelledby="work-head">
         <div class="container">
           <div class="opens">
-            <h2 id="work-head">Six things I’ve shipped</h2>
+            <h2 id="work-head">Ten things I’ve shipped</h2>
           </div>
 
           <article class="lead-project">
+            <figure
+              class="capture"
+              data-slot="critters"
+              data-kind="product"
+              data-alt="critterformations.com chapter page at 1440 wide, captured from the live site"
+            >
+              <img
+                src="images/screens/critters/screen-chapter-21-desktop.png"
+                width="2880"
+                height="1800"
+                alt="A Critter Formations chapter page: cards for each stage, each showing a 5 by 5 board of critters and the level it was cleared at"
+                loading="lazy"
+              />
+            </figure>
+            <div class="lead-project__facts">
+              <h3><a href="https://critterformations.com/" target="_blank" rel="noopener">Critter Formations</a></h3>
+              <p class="label kind">Website, in four languages</p>
+              <p>
+                A Main Stage reference for Clash of Critters: browse formations by
+                chapter, with observed Tatari levels, exact 5×5 boards and links to
+                the original player posts, across 5,335 stages.
+              </p>
+              <p class="figure"><span class="figure__n">12K</span> <span class="label">users a week</span></p>
+              <p class="label stack">Static site, Supabase, GitHub Pages</p>
+            </div>
+          </article>
+
+          <article class="lead-project lead-project--flip">
+            <div class="lead-project__facts">
+              <h3><a href="https://maptogpx.com/" target="_blank" rel="noopener">Google Maps Route to GPX</a></h3>
+              <p class="label kind">Website</p>
+              <p>
+                Converts Google Maps direction URLs into GPX files compatible with
+                cycling computers (Garmin, Bryton, Wahoo). Built with Next.js and deployed on Vercel.
+              </p>
+              <p class="figure"><span class="figure__n">5K</span> <span class="label">routes converted a month</span></p>
+              <p class="label stack">Next.js, TypeScript, Tailwind CSS, Vercel</p>
+            </div>
             <figure
               class="capture"
               data-slot="maptogpx"
@@ -300,95 +336,87 @@ h3 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
                 loading="lazy"
               />
             </figure>
-            <div class="lead-project__facts">
-              <h3><a href="https://maptogpx.com/" target="_blank" rel="noopener">Google Maps Route to GPX</a></h3>
-              <p class="label kind">Website</p>
-              <p>
-                Converts Google Maps direction URLs into GPX files compatible with
-                cycling computers (Garmin, Bryton, Wahoo). Built with Next.js and deployed on Vercel.
-              </p>
-              <p class="figure"><span class="figure__n">5K</span> <span class="label">routes converted a month</span></p>
-              <p class="label stack">Next.js, TypeScript, Tailwind CSS, Vercel</p>
-            </div>
           </article>
 
-          <ol class="index" role="list">
-            <li class="index__row">
-              <h3><a href="https://freebikefit.com/" target="_blank" rel="noopener">Free Bike Fit</a></h3>
-              <p>
-                Browser-based dynamic bike fit. Film yourself pedalling from the side,
-                see joint lines and angles drawn on your body, and get a fit report
-                with adjustment suggestions. Everything runs locally in the browser;
-                no video leaves the device.
-              </p>
-              <div class="index__meta">
-                <p class="label kind">Website, in English and Traditional Chinese</p>
-                <p class="label stack">JavaScript, MediaPipe Pose Landmarker</p>
-              </div>
-            </li>
-            <li class="index__row">
-              <h3><a href="https://critterformations.com/" target="_blank" rel="noopener">Critter Formations</a></h3>
-              <p>
-                A Main Stage reference for Clash of Critters: browse formations by
-                chapter, with observed Tatari levels, exact 5×5 boards and links to
-                the original player posts, across 5,335 stages.
-              </p>
-              <div class="index__meta">
-                <p class="figure"><span class="figure__n">12K</span> <span class="label">users a week</span></p>
-                <p class="label stack">Static site, Supabase, GitHub Pages</p>
-              </div>
-            </li>
-            <li class="index__row">
-              <h3><a href="https://apps.apple.com/us/app/tabmates-group-trip-expenses/id6823494541" target="_blank" rel="noopener">Tabmates</a></h3>
-              <p>
-                Track shared costs during the trip, then settle up once at the end
-                with the fewest payments. Groups join by invite code; sign in with
-                Apple or Google. No ads, no tracking.
-              </p>
-              <div class="index__meta">
-                <p class="label kind">iPhone app on the App Store</p>
-                <p class="label stack">React Native, Expo, TypeScript, Supabase</p>
-              </div>
-            </li>
-            <li class="index__row">
-              <h3><a href="https://chromewebstore.google.com/detail/minimalist-tab-closer/gbabimkoeadpamohlnfncikibjdakgdg" target="_blank" rel="noopener">Minimalist Tab Closer</a></h3>
-              <p>
-                Lightweight Chrome extension that closes all tabs except the
-                active one via a keyboard shortcut. Zero configuration required.
-              </p>
-              <div class="index__meta">
-                <p class="figure"><span class="figure__n">100+</span> <span class="label">active users on Chrome Web Store</span></p>
-                <p class="label stack">TypeScript, Chrome API, Extension</p>
-              </div>
-            </li>
-          </ol>
-
-          <article class="lead-project lead-project--flip">
-            <div class="lead-project__facts">
-              <h3><a href="https://kaichin.dev/bike/" target="_blank" rel="noopener">Kai’s Bike</a></h3>
-              <p class="label kind">3D viewer in the browser</p>
-              <p>
-                My Canyon Endurace CF SLX 7 AXS, modelled in Blender with my own
-                upgrades. Orbit it, tap a part to see what it is, spin the wheels
-                and hear the freehub coast.
-              </p>
-              <p class="label stack">Blender, Next.js, React Three Fiber, Three.js</p>
-            </div>
-            <figure
-              class="capture"
-              data-slot="bike"
-              data-kind="product"
-              data-alt="kaichin.dev/bike at 1440 wide, the white Canyon Endurace in the 3D viewer"
-            >
-              <img
-                src="images/screens/bike/screen-bike-desktop.png"
-                width="2880"
-                height="1800"
-                alt="A white Canyon Endurace road bike rendered in 3D, with an upgrades list and a spin-the-wheel control beside it"
-                loading="lazy"
-              />
-            </figure>
-          </article>
+          <section class="group" aria-labelledby="g-web">
+            <h3 id="g-web">Websites</h3>
+            <ol class="index" role="list">
+                <li class="index__row">
+                  <h4><a href="https://freebikefit.com/" target="_blank" rel="noopener">Free Bike Fit</a></h4>
+                  <p>Browser-based dynamic bike fit. Film yourself pedalling from the side, see joint lines and angles drawn on your body, and get a fit report with adjustment suggestions. Everything runs locally in the browser; no video leaves the device.</p>
+                  <div class="index__meta">
+                    <p class="label kind">In English and Traditional Chinese</p>
+                    <p class="label stack">JavaScript, MediaPipe Pose Landmarker</p>
+                  </div>
+                </li>
+                <li class="index__row">
+                  <h4><a href="https://kaichin.dev/bike/" target="_blank" rel="noopener">Kai’s Bike</a></h4>
+                  <p>My Canyon Endurace CF SLX 7 AXS as a 3D viewer, modelled in Blender with my own upgrades. Orbit it, tap a part to see what it is, spin the wheels and hear the freehub coast.</p>
+                  <div class="index__meta">
+                    <p class="label kind">3D viewer in the browser</p>
+                    <p class="label stack">Blender, Next.js, React Three Fiber, Three.js</p>
+                  </div>
+                </li>
+            </ol>
+          </section>
+          <section class="group" aria-labelledby="g-apps">
+            <h3 id="g-apps">Apps</h3>
+            <ol class="index" role="list">
+                <li class="index__row">
+                  <h4><a href="https://apps.apple.com/us/app/tabmates-group-trip-expenses/id6823494541" target="_blank" rel="noopener">Tabmates</a></h4>
+                  <p>Track shared costs during the trip, then settle up once at the end with the fewest payments. Groups join by invite code; sign in with Apple or Google. No ads, no tracking.</p>
+                  <div class="index__meta">
+                    <p class="label kind">iPhone app</p>
+                    <p class="label stack">React Native, Expo, TypeScript, Supabase</p>
+                  </div>
+                </li>
+                <li class="index__row">
+                  <h4><a href="https://apps.apple.com/us/app/habit-reports/id6757502106" target="_blank" rel="noopener">Habit Reports</a></h4>
+                  <p>Cross-platform habit tracking app with interactive heatmaps, streaks, and progress analytics. Built with a local-first data architecture for offline access and privacy.</p>
+                  <div class="index__meta">
+                    <p class="label kind">iOS and Android app</p>
+                    <p class="label stack">React Native, Expo, TypeScript</p>
+                  </div>
+                </li>
+                <li class="index__row">
+                  <h4><a href="https://apps.apple.com/us/app/band-faces/id6826762523" target="_blank" rel="noopener">Band Faces</a></h4>
+                  <p>Installs custom watch faces on a Xiaomi Smart Band 10 over Bluetooth, straight from an iPhone. Mi Fitness only offers Xiaomi’s own faces, so the app does the install itself.</p>
+                  <div class="index__meta">
+                    <p class="label kind">iPhone app</p>
+                    <p class="label stack">Swift, Bluetooth</p>
+                  </div>
+                </li>
+                <li class="index__row">
+                  <h4><a href="https://apps.apple.com/us/app/pixel-tower-defense-td/id6824350567" target="_blank" rel="noopener">Pixel Tower Defense TD</a></h4>
+                  <p>A retro pixel-art tower defense game. Protect the princess across 5 maps of 10 levels each, with four towers, eight enemy types and a hero you move yourself.</p>
+                  <div class="index__meta">
+                    <p class="label kind">iPhone game</p>
+                    <p class="label stack">Unity, C#</p>
+                  </div>
+                </li>
+            </ol>
+          </section>
+          <section class="group" aria-labelledby="g-ext">
+            <h3 id="g-ext">Browser extensions</h3>
+            <ol class="index" role="list">
+                <li class="index__row">
+                  <h4><a href="https://chromewebstore.google.com/detail/minimalist-tab-closer/gbabimkoeadpamohlnfncikibjdakgdg" target="_blank" rel="noopener">Minimalist Tab Closer</a></h4>
+                  <p>Lightweight Chrome extension that closes all tabs except the active one via a keyboard shortcut. Zero configuration required.</p>
+                  <div class="index__meta">
+                    <p class="figure"><span class="figure__n">100+</span> <span class="label">active users on Chrome Web Store</span></p>
+                    <p class="label stack">TypeScript, Chrome API</p>
+                  </div>
+                </li>
+                <li class="index__row">
+                  <h4><a href="https://chromewebstore.google.com/detail/pause/okokcifnpkcbadfbagddibpmkmgcbcpg" target="_blank" rel="noopener">Pause</a></h4>
+                  <p>A mindful pause before TikTok, Instagram Reels and YouTube Shorts: a 5-second countdown and one question before the feed loads. No account, and no data leaves your device.</p>
+                  <div class="index__meta">
+                    <p class="label kind">Chrome extension</p>
+                    <p class="label stack">JavaScript, Chrome API</p>
+                  </div>
+                </li>
+            </ol>
+          </section>
         </div>
       </section>
 
