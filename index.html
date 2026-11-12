@@ -42,17 +42,17 @@
     />
     <style>
 /* Hallmark · shape: Feature Stack (draw 8ab7b9, recast: one sticky pane in Experience) · genre: editorial · theme: Editorial (deal 3/3, seed personal-software-engineer-who-1b1d·bdabd8d7·2026-11-11·r0) · redesign: full
- * hero: Stage, reversed (swapped from Poster: the hero is a turnable 3D figure, not a photograph) · nav: masthead · footer: colophon block · imagery: 3D model 1 (the owner, made with Meshy, with a still), screenshots 2 (capture.mjs: critterformations.com, maptogpx.com) · signature: the owner in the first screen as a 3D model the visitor can turn
+ * hero: Stage, reversed (swapped from Poster: the hero is a turnable 3D figure, not a photograph) · nav: masthead · footer: colophon block · imagery: 3D model 1 (the owner, made with Meshy, with a still), screenshots 2 (capture.mjs: critterformations.com, maptogpx.com), 8 thumbnails (store listings and captures), library 1 (Raspberry Pi) · signature: the owner in the first screen as a 3D model the visitor can turn
  * axes: light/display-condensed/chromatic-green · posture: restrained · contrast: pass · fold: pass · job: hire · draw: 8ab7b9 · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 · weakest: P, a portfolio argues little by nature; the page argues shipped over described by opening the work on a live capture with its daily users */
 /* Hallmark · waive 44c · the 3D figure spans y 180 to 774 and the text block with its fact row 280 to 715 at 1440, centres within 25px · the fact row under the actions belongs to the portfolio's text block */
 /* Hallmark · dropped /cdn-cgi/l/email-protection#80e8f5e1eee7aeebe1e9e3e8e9eec0e7ede1e9ecaee3efed · that Cloudflare-encoded href 404s on GitHub Pages, so the same address now opens as a plain mailto link */
 /* Hallmark · dropped sceneWrap, screenCode, screenGlow, deskGlow, n, .reveal · the drawn desk scene (80) and the hidden-at-rest reveal (62) left with them */
 /* Hallmark · reworded "I'm Kai-Chin Huang" to "Kai-Chin Huang" · 38iii named the gradient-accented half of the name */
-/* Hallmark · reworded "Career Journey" to "Amazon, 2022 to present", "Academic Background" to "Three degrees, 2019 to 2025", "Featured Projects" to "Ten things I’ve shipped", "Skills" to "From TypeScript to AWS CDK" · craft 6 refuses journey and category-label heads */
+/* Hallmark · reworded "Career Journey" to "Amazon, 2022 to present", "Academic Background" to "Three degrees, 2019 to 2025", "Featured Projects" to "Eleven things I’ve built", "Bakery Voice Recognition System" to "Bakery Voice Recognition", "Skills" to "From TypeScript to AWS CDK" · craft 6 refuses journey and category-label heads */
 /* Hallmark · reworded "Software Engineer II", "Software Engineer", "M.S. Information Studies", "B.E. Computer Science" and "A.S. Computer Science" into the pane lead, a role label and table row heads, word for word · the table and pane own them now */
 /* Hallmark · dropped "Some things I’ve built and shipped." · 69 names it, the line restated the section heading */
-/* Hallmark · dropped Bakery Voice Recognition System, Search and Rescue, Random Emoji Commit, https://www.npmjs.com/package/random-emoji-commit?activeTab=readme, https://apps.apple.com/us/app/habit-reports/id6757502106?l=zh-Hant-TW, https://medium.com/a-chatbots-life/voice-recognition-bakery-solution-1cdb06cf636e, https://qaz6209031.github.io/Cal-Poly-Surp-Website/ · the owner retired these projects on 2026-11-11 */
+/* Hallmark · dropped Search and Rescue, Random Emoji Commit, https://www.npmjs.com/package/random-emoji-commit?activeTab=readme, https://apps.apple.com/us/app/habit-reports/id6757502106?l=zh-Hant-TW, https://qaz6209031.github.io/Cal-Poly-Surp-Website/ · the owner retired these projects on 2026-11-11 */
 /* Hallmark · hero-review: fix · 5 findings · 4 resolved 1 answered (the 460px portrait stands in until the Meshy model lands) */
 /* Hallmark · finish-review: subagent · 6 findings · 6 resolved · gap: the signature waits on the 3D model */
 @import url("./tokens.css");
@@ -139,10 +139,13 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 .group { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: var(--gap-columns); align-items: start; margin-top: var(--space-3xl); padding-top: var(--space-lg); border-top: var(--rule-heavy) solid var(--color-ink); }
 .group > h3 { font-size: var(--text-row); }
 .index { margin: 0; padding: 0; list-style: none; }
-.index__row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.index__row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 5fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
 .index__row:first-child { padding-top: 0; }
 .index__row h4 { margin: 0; font-family: var(--font-display); font-weight: var(--display-weight); font-variation-settings: var(--wdth-display); font-size: var(--text-title); line-height: 1.1; letter-spacing: var(--tracking-display); color: var(--color-ink); overflow-wrap: break-word; min-width: 0; }
-.index__row > p { max-width: 58ch; }
+.thumb { margin: 0; aspect-ratio: 16 / 10; }
+.thumb > img { outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; filter: none; }
+.index__body { display: flex; flex-direction: column; gap: var(--space-xs); }
+.index__body > p:not(.label) { max-width: 58ch; }
 .index__meta { display: flex; flex-direction: column; gap: var(--space-xs); }
 
 /* Experience: the ink band, its head held while the rows pass */
@@ -181,14 +184,17 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
 .contact__off { margin-top: var(--space-lg); color: var(--color-ink-2); }
 
 /* Colophon */
+.colophon .credits { margin-top: var(--space-xs); color: var(--color-muted); }
 .colophon { border-top: var(--rule-hair) solid var(--color-rule-2); padding-block: var(--space-xl) var(--space-2xl); font-size: var(--text-sm); color: var(--color-ink-2); }
 
 @media (max-width: 60rem) {
-  .lead-project, .group, .index__row, .stack-pane, .record, .earlier { grid-template-columns: minmax(0, 1fr); }
+  .lead-project, .group, .stack-pane, .record, .earlier { grid-template-columns: minmax(0, 1fr); }
   .stack-pane__pin { position: static; }
   .earlier h3 { grid-row: auto; }
   .earlier p:last-child { grid-column: auto; }
-  .index__row { gap: var(--space-md); }
+  .index__row { grid-template-columns: minmax(0, 2fr) minmax(0, 5fr); column-gap: var(--space-md); row-gap: var(--space-xs); }
+  .index__meta { grid-column: 2; }
+  .index__meta:empty { display: none; }
   .record { gap: var(--space-2xl); }
 }
 @media (max-width: 40rem) {
@@ -280,7 +286,7 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
       <section class="work" id="projects" aria-labelledby="work-head">
         <div class="container">
           <div class="opens">
-            <h2 id="work-head">Ten things I’ve shipped</h2>
+            <h2 id="work-head">Eleven things I’ve built</h2>
           </div>
 
           <article class="lead-project">
@@ -300,11 +306,9 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
             </figure>
             <div class="lead-project__facts">
               <h3><a href="https://critterformations.com/" target="_blank" rel="noopener">Critter Formations</a></h3>
-              <p class="label kind">Website, in four languages</p>
               <p>
-                A Main Stage reference for Clash of Critters: browse formations by
-                chapter, with observed Tatari levels, exact 5×5 boards and links to
-                the original player posts, across 5,335 stages.
+                Exact 5×5 boards for 5,335 Clash of Critters stages, extracted from
+                1,700+ player posts and checked against each original screenshot.
               </p>
               <p class="figure"><span class="figure__n">12K</span> <span class="label">users a week</span></p>
               <p class="label stack">Static site, Supabase, GitHub Pages</p>
@@ -314,13 +318,12 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
           <article class="lead-project lead-project--flip">
             <div class="lead-project__facts">
               <h3><a href="https://maptogpx.com/" target="_blank" rel="noopener">Google Maps Route to GPX</a></h3>
-              <p class="label kind">Website</p>
               <p>
-                Converts Google Maps direction URLs into GPX files compatible with
-                cycling computers (Garmin, Bryton, Wahoo). Built with Next.js and deployed on Vercel.
+                Turns a Google Maps directions link into a GPX file that Garmin,
+                Bryton and Wahoo computers can follow, with no sign-up.
               </p>
               <p class="figure"><span class="figure__n">5K</span> <span class="label">routes converted a month</span></p>
-              <p class="label stack">Next.js, TypeScript, Tailwind CSS, Vercel</p>
+              <p class="label stack">Next.js, TypeScript, Vercel</p>
             </div>
             <figure
               class="capture"
@@ -342,19 +345,27 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
             <h3 id="g-web">Websites</h3>
             <ol class="index" role="list">
                 <li class="index__row">
-                  <h4><a href="https://freebikefit.com/" target="_blank" rel="noopener">Free Bike Fit</a></h4>
-                  <p>Browser-based dynamic bike fit. Film yourself pedalling from the side, see joint lines and angles drawn on your body, and get a fit report with adjustment suggestions. Everything runs locally in the browser; no video leaves the device.</p>
+                  <figure class="thumb" data-slot="free-bike-fit" data-kind="product">
+                    <img src="images/thumbs/free-bike-fit.webp" width="960" height="600" alt="The Free Bike Fit page with a camera panel and fit settings" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://freebikefit.com/" target="_blank" rel="noopener">Free Bike Fit</a></h4>
+                    <p>Bike fitting from a phone video. MediaPipe pose tracking measures joint angles over 20 pedal strokes in the browser, then says what to adjust; no video leaves the device.</p>
+                    <p class="label stack">JavaScript, MediaPipe</p>
+                  </div>
                   <div class="index__meta">
-                    <p class="label kind">In English and Traditional Chinese</p>
-                    <p class="label stack">JavaScript, MediaPipe Pose Landmarker</p>
                   </div>
                 </li>
                 <li class="index__row">
-                  <h4><a href="https://kaichin.dev/bike/" target="_blank" rel="noopener">Kai’s Bike</a></h4>
-                  <p>My Canyon Endurace CF SLX 7 AXS as a 3D viewer, modelled in Blender with my own upgrades. Orbit it, tap a part to see what it is, spin the wheels and hear the freehub coast.</p>
+                  <figure class="thumb" data-slot="kais-bike" data-kind="product">
+                    <img src="images/thumbs/kais-bike.webp" width="960" height="600" alt="A white Canyon road bike rendered in 3D on a dark ground" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://kaichin.dev/bike/" target="_blank" rel="noopener">Kai’s Bike</a></h4>
+                    <p>My road bike rebuilt part by part in Blender and rendered with React Three Fiber. Orbit it, tap an upgrade, spin the wheels and hear the freehub coast.</p>
+                    <p class="label stack">Blender, Next.js, React Three Fiber</p>
+                  </div>
                   <div class="index__meta">
-                    <p class="label kind">3D viewer in the browser</p>
-                    <p class="label stack">Blender, Next.js, React Three Fiber, Three.js</p>
                   </div>
                 </li>
             </ol>
@@ -363,35 +374,51 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
             <h3 id="g-apps">Apps</h3>
             <ol class="index" role="list">
                 <li class="index__row">
-                  <h4><a href="https://apps.apple.com/us/app/tabmates-group-trip-expenses/id6823494541" target="_blank" rel="noopener">Tabmates</a></h4>
-                  <p>Track shared costs during the trip, then settle up once at the end with the fewest payments. Groups join by invite code; sign in with Apple or Google. No ads, no tracking.</p>
+                  <figure class="thumb" data-slot="tabmates" data-kind="product">
+                    <img src="images/thumbs/tabmates.webp" width="960" height="600" alt="Three Tabmates App Store screens: groups, expenses and adding an expense" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://apps.apple.com/us/app/tabmates-group-trip-expenses/id6823494541" target="_blank" rel="noopener">Tabmates</a></h4>
+                    <p>Shared trip expenses that settle in the fewest payments. Debt simplification and expense locking run in Postgres; sign in with Apple or Google.</p>
+                    <p class="label stack">React Native, Expo, Supabase</p>
+                  </div>
                   <div class="index__meta">
-                    <p class="label kind">iPhone app</p>
-                    <p class="label stack">React Native, Expo, TypeScript, Supabase</p>
                   </div>
                 </li>
                 <li class="index__row">
-                  <h4><a href="https://apps.apple.com/us/app/habit-reports/id6757502106" target="_blank" rel="noopener">Habit Reports</a></h4>
-                  <p>Cross-platform habit tracking app with interactive heatmaps, streaks, and progress analytics. Built with a local-first data architecture for offline access and privacy.</p>
-                  <div class="index__meta">
-                    <p class="label kind">iOS and Android app</p>
+                  <figure class="thumb" data-slot="habit-reports" data-kind="product">
+                    <img src="images/thumbs/habit-reports.webp" width="960" height="600" alt="Three Habit Reports App Store screens with colour heatmaps of daily habits" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://apps.apple.com/us/app/habit-reports/id6757502106" target="_blank" rel="noopener">Habit Reports</a></h4>
+                    <p>A habit tracker that turns each day into a heatmap and a streak. Local-first, so it works offline and the data stays on the phone.</p>
                     <p class="label stack">React Native, Expo, TypeScript</p>
                   </div>
-                </li>
-                <li class="index__row">
-                  <h4><a href="https://apps.apple.com/us/app/band-faces/id6826762523" target="_blank" rel="noopener">Band Faces</a></h4>
-                  <p>Installs custom watch faces on a Xiaomi Smart Band 10 over Bluetooth, straight from an iPhone. Mi Fitness only offers Xiaomi’s own faces, so the app does the install itself.</p>
                   <div class="index__meta">
-                    <p class="label kind">iPhone app</p>
-                    <p class="label stack">Swift, Bluetooth</p>
                   </div>
                 </li>
                 <li class="index__row">
-                  <h4><a href="https://apps.apple.com/us/app/pixel-tower-defense-td/id6824350567" target="_blank" rel="noopener">Pixel Tower Defense TD</a></h4>
-                  <p>A retro pixel-art tower defense game. Protect the princess across 5 maps of 10 levels each, with four towers, eight enemy types and a hero you move yourself.</p>
+                  <figure class="thumb" data-slot="band-faces" data-kind="product">
+                    <img src="images/thumbs/band-faces.webp" width="960" height="600" alt="Three Band Faces App Store screens showing a watch face being sent to a band" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://apps.apple.com/us/app/band-faces/id6826762523" target="_blank" rel="noopener">Band Faces</a></h4>
+                    <p>Installs custom watch faces on a Xiaomi Smart Band 10 straight from an iPhone, which the official app can’t do. Talks to the band over Bluetooth.</p>
+                    <p class="label stack">Swift, Core Bluetooth</p>
+                  </div>
                   <div class="index__meta">
-                    <p class="label kind">iPhone game</p>
+                  </div>
+                </li>
+                <li class="index__row">
+                  <figure class="thumb" data-slot="pixel-tower-defense" data-kind="product">
+                    <img src="images/thumbs/pixel-tower-defense.webp" width="960" height="600" alt="Three Pixel Tower Defense App Store screens with a pixel princess, a tower and the hero" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://apps.apple.com/us/app/pixel-tower-defense-td/id6824350567" target="_blank" rel="noopener">Pixel Tower Defense TD</a></h4>
+                    <p>A retro tower defense game: real 3D scenes rendered to a low-resolution texture for the pixel look, 50 levels across 5 maps.</p>
                     <p class="label stack">Unity, C#</p>
+                  </div>
+                  <div class="index__meta">
                   </div>
                 </li>
             </ol>
@@ -400,19 +427,45 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
             <h3 id="g-ext">Browser extensions</h3>
             <ol class="index" role="list">
                 <li class="index__row">
-                  <h4><a href="https://chromewebstore.google.com/detail/minimalist-tab-closer/gbabimkoeadpamohlnfncikibjdakgdg" target="_blank" rel="noopener">Minimalist Tab Closer</a></h4>
-                  <p>Lightweight Chrome extension that closes all tabs except the active one via a keyboard shortcut. Zero configuration required.</p>
-                  <div class="index__meta">
-                    <p class="figure"><span class="figure__n">100+</span> <span class="label">active users on Chrome Web Store</span></p>
+                  <figure class="thumb" data-slot="minimalist-tab-closer" data-kind="product">
+                    <img src="images/thumbs/minimalist-tab-closer.webp" width="960" height="600" alt="The Minimalist Tab Closer store banner: Close Other Tabs" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://chromewebstore.google.com/detail/minimalist-tab-closer/gbabimkoeadpamohlnfncikibjdakgdg" target="_blank" rel="noopener">Minimalist Tab Closer</a></h4>
+                    <p>Closes every tab but the current one with a single shortcut. No setup, no settings.</p>
                     <p class="label stack">TypeScript, Chrome API</p>
+                  </div>
+                  <div class="index__meta">
+                    <p class="figure"><span class="figure__n">100+</span> <span class="label">active users</span></p>
                   </div>
                 </li>
                 <li class="index__row">
-                  <h4><a href="https://chromewebstore.google.com/detail/pause/okokcifnpkcbadfbagddibpmkmgcbcpg" target="_blank" rel="noopener">Pause</a></h4>
-                  <p>A mindful pause before TikTok, Instagram Reels and YouTube Shorts: a 5-second countdown and one question before the feed loads. No account, and no data leaves your device.</p>
-                  <div class="index__meta">
-                    <p class="label kind">Chrome extension</p>
+                  <figure class="thumb" data-slot="pause" data-kind="product">
+                    <img src="images/thumbs/pause.webp" width="960" height="600" alt="The Pause overlay asking whether opening TikTok is what you want right now" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://chromewebstore.google.com/detail/pause/okokcifnpkcbadfbagddibpmkmgcbcpg" target="_blank" rel="noopener">Pause</a></h4>
+                    <p>Stops TikTok, Reels and Shorts for five seconds with one question before the feed loads, and counts how often you turn back. Everything stays in the browser.</p>
                     <p class="label stack">JavaScript, Chrome API</p>
+                  </div>
+                  <div class="index__meta">
+                  </div>
+                </li>
+            </ol>
+          </section>
+          <section class="group" aria-labelledby="g-other">
+            <h3 id="g-other">Others</h3>
+            <ol class="index" role="list">
+                <li class="index__row">
+                  <figure class="thumb" data-slot="bakery-voice" data-kind="product">
+                    <img src="images/thumbs/bakery-voice.webp" width="960" height="600" alt="A Raspberry Pi single-board computer" loading="lazy" />
+                  </figure>
+                  <div class="index__body">
+                    <h4><a href="https://medium.com/a-chatbots-life/voice-recognition-bakery-solution-1cdb06cf636e" target="_blank" rel="noopener">Bakery Voice Recognition</a></h4>
+                    <p>My college senior project: a hands-free voice assistant for a local bakery that answers baking questions by voice. Featured in Chatbots Life.</p>
+                    <p class="label stack">Python, Google Voice Kit, Raspberry Pi</p>
+                  </div>
+                  <div class="index__meta">
                   </div>
                 </li>
             </ol>
@@ -506,6 +559,7 @@ h3 a, h4 a { text-decoration-line: underline; text-decoration-thickness: 1px; }
     <footer class="colophon">
       <div class="container">
         <p>© 2026 Kai-Chin Huang. Vibe coded with 💚 and ☕. Set in Bricolage Grotesque and Source Serif 4, served by GitHub Pages.</p>
+        <p class="credits" data-credits>Photograph: <a href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Side.jpg">Raspberry Pi 4 by Laserlicht</a> (CC BY-SA 4.0, Wikimedia Commons).</p>
       </div>
     </footer>
 
